@@ -24,6 +24,8 @@ urlpatterns = [
     # MedC Home
     url(r'^schedule/', include("schedule.urls")),
     url(r'^medc/', include("medc.urls")),
+    # url(r'^users/', include("users.urls")),
+    url(r'^users/', include("users.urls")),
 ]
 
 if settings.DEBUG:

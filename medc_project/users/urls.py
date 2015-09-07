@@ -4,7 +4,6 @@ from django.conf import settings
 from . import views
 
 admin.autodiscover()
-
 urlpatterns = (
-    url(r'^base/$', views.home, name="home"),
+    url(r'^login/$', views.user_login, name="login"),
 )

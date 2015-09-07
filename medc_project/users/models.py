@@ -7,18 +7,17 @@ from django.conf import settings
     Organization: An organization
 '''
 
-'''
+
 class Organization(models.Model):
     owner = models.ManyToManyField(settings.AUTH_USER_MODEL)
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
     updated_at = models.DateTimeField(auto_now_add=True, editable=True)
     name = models.CharField(max_length=255)
 
-
-    def __unicode__(slef):
+    def __unicode__(self):
         return self.name
 
-'''
+
 '''
     User Profile that has a one to one relation with User
 '''
