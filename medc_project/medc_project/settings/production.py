@@ -6,21 +6,18 @@ TEMPLATE_DEBUG = True
 
 
 DATABASES = settings.DATABASES
-
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
-DATABASES['default'] = dj_database_url.config()
+DATABASES['default'] =  dj_database_url.config()
 
-# Enable Connection Pooling
-DATABASES['default']['ENGINE'] = 'django_postgrespool'
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-# Simplified static file serving.
-# https://warehouse.python.org/project/whitenoise/
+# Allow all host headers
+ALLOWED_HOSTS = ['*']
 
-# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.7/howto/static-files/
-
+# # Static asset configuration
+# import os
 # BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # STATIC_ROOT = 'staticfiles'
 # STATIC_URL = '/static/'

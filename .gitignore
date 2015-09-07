@@ -13,5 +13,7 @@ __pycache__/
 # C extensions
 *.so
 
+*.pyc
+staticfiles
 # Local Settings
 medc_project/medc_project/settings/local.py
