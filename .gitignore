@@ -1,0 +1,17 @@
+# List of files ignored in gitrepo
+
+# Ignore the virtual env
+bin/
+include/
+lib/
+pip-selfcheck.json
+
+# Byte-cimpiled /optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Local Settings
+medc_project/medc_project/settings/local.py
