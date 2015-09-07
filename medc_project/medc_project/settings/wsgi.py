@@ -23,9 +23,6 @@ try:
     aplication = Cling(get_wsgi_application())
 except:
     pass
-
-
-application = Cling(get_wsgi_application())
 #
 # try:
 #     from whitenoise.django import DjangoWhiteNoise
