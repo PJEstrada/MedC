@@ -1,9 +1,9 @@
 # List of files ignored in gitrepo
 
 # Ignore the virtual env
-bin/
-include/
-lib/
+bin/*
+include/*
+lib/*
 pip-selfcheck.json
 
 # Byte-cimpiled /optimized / DLL files
