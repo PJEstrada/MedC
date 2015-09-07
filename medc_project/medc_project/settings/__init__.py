@@ -8,5 +8,3 @@ except:
 
 if live:
     from .production import *
-
-from .wasgi import *
