@@ -1,10 +1,8 @@
 from django.conf import settings
-import sys
+
 
 DEBUG = False
 TEMPLATE_DEBUG = True
-
-sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
 
 DATABASES = settings.DATABASES
 # Parse database configuration from $DATABASE_URL
