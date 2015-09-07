@@ -23,9 +23,9 @@ try:
     aplication = Cling(get_wsgi_application())
 except:
     pass
-
-try:
-    from whitenoise.django import DjangoWhiteNoise
-
-    application = get_wsgi_application()
-    application = DjangoWhiteNoise(application)
+#
+# try:
+#     from whitenoise.django import DjangoWhiteNoise
+#
+#     application = get_wsgi_application()
+#     application = DjangoWhiteNoise(application)
