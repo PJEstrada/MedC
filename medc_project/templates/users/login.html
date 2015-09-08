@@ -1,22 +1,31 @@
+
+{% load staticfiles %}
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <!-- Is anyone getting tired of repeatedly entering the header over and over?? -->
-        <title>Login</title>
+        <title>{% block head_title %}MedC Login{% endblock %}</title>
     </head>
 
-    <body>
-        <h1>Login to Medc</h1>
+<body>
+ 
+ {% block body_block %}
 
-        <form id="login_form" method="post" action="/users/login/">
-            {% csrf_token %}
-            Username: <input type="text" name="username" value="" size="50" />
-            <br />
-            Password: <input type="password" name="password" value="" size="50" />
-            <br />
+<link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
 
-            <input type="submit" value="submit" />
-        </form>
+<form class="form-signin" role="form" method="post" action=".">
+{% csrf_token %}
 
-    </body>
+<h2 class="form-signin-heading">MedC Sign In</h2>
+<input class="form-control" placeholder="Correo Electronico" id="id_username" maxlength="254" name="username" type="text" required autofocus=""/>
+<input type="password" class="form-control" placeholder="Contrasena" id="id_password" name="password" type="password" required />
+
+<button class="btn btn-lg btn-primary btn-block" type="submit" value="Submit" />Sign in</button>
+</form>
+
+{% endblock %}
+
+
+</body>
 </html>

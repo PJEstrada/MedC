@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 # Create your views here.
 
@@ -26,7 +26,7 @@ def user_login(request):
                 # If the account is valid and active, we can log the user in.
                 # We'll send the user back to the homepage.
                 login(request, user)
-                return HttpResponseRedirect('/medc/base') #WHEREVER WE'RE GONNA SEND THEM
+                return HttpResponseRedirect('/medc/base') # WHEREVER WE'RE GONNA SEND THEM
             else:
                 # An inactive account was used - no logging in!
                 return HttpResponse("Su cuenta ha sido desactivada.")
@@ -41,3 +41,15 @@ def user_login(request):
         # No context variables to pass to the template system, hence the
         # blank dictionary object...
         return render(request, "users/login.html", {})
+
+'''
+Function that logs the user out
+'''
+
+
+#@login_required
+def user_logout(request):
+    # Since we know the user is lloged in, we can now log them out
+    logout(request)
+    # Take the user back to login screen
+    return HttpResponseRedirect("users/login.html")
