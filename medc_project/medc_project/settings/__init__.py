@@ -6,5 +6,5 @@ try:
 except:
     live = True
 
-if live:
+if live is True:
     from .production import *

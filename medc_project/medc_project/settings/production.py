@@ -2,7 +2,7 @@ from django.conf import settings
 
 
 DEBUG = False
-TEMPLATE_DEBUG = False
+TEMPLATE_DEBUG = True
 
 DATABASES = settings.DATABASES
 # Parse database configuration from $DATABASE_URL
@@ -15,12 +15,22 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
-# # Static asset configuration
+# Static asset configuration
+#
+#
 # import os
-# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-# STATIC_ROOT = 'staticfiles'
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+#
+#sdasdasd
+# # BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# # STATIC_ROOT = 'staticfiles'
 # STATIC_URL = '/static/'
 #
+# STATIC_PATH = os.path.join(BASE_DIR, 'static',)
+#
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static', 'static_root')
+#
 # STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
+#     STATIC_PATH,
 # )
+# # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
