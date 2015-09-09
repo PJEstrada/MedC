@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 
@@ -47,7 +48,7 @@ Function that logs the user out
 '''
 
 
-#@login_required
+#@login_required(LOGIN_URL='/users/login/')
 def user_logout(request):
     # Since we know the user is lloged in, we can now log them out
     logout(request)
