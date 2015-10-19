@@ -35,3 +35,6 @@ class ClinicUser(models.Model):
     def __unicode__(self):
         verbose = self.first_name + self.last_name
         return verbose
+
+class PatientUser(models.Model):
+    user = models.OneToOneField(settings.AUTH_USER_MODEL)

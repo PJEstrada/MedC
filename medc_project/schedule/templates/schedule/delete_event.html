@@ -2,11 +2,11 @@
 {% load i18n %}
 
 {% block body %}
-<h1>{% trans "Delete" %}</h1>
-{% trans "Are you sure that you really want to delete it?" %}
+<h1>{% trans "Eliminar Cita: " %}</h1>
+{% trans "Esta seguro que desea elimina la cita?" %}
 
 <form action="" method="post">{% csrf_token %}
-    <input type="submit" value="Confirm" />
-    <input type="submit" name="cancel" value="Cancel" />
+    <button class="btn-danger" type="submit" value="Confirm" >{% trans "Confirmar" %}</button>
+    <button class="btn-default" type="submit" name="cancel" value="Cancel" >{% trans "Cancelar" %}<button>
 </form>
 {% endblock %}

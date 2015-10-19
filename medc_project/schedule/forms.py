@@ -3,7 +3,8 @@ from django import forms
 from django.utils.translation import ugettext_lazy as _
 from schedule.models import Event, Occurrence
 
-
+forms.DateInput.input_type="date"
+forms.TimeInput.input_type="time"
 class SpanForm(forms.ModelForm):
     start = forms.DateTimeField(label=_("start"),
                                 widget=forms.SplitDateTimeWidget)

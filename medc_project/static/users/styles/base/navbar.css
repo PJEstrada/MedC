@@ -7,7 +7,7 @@
 
 .navbar-default {
 
-    background-color: rgb(61, 139, 220);
+    background-color: #003366;
 
 }
 
@@ -23,11 +23,13 @@
     padding-top: 0;
     border-radius: 45px/15px;
 }
-
+#top-navbar{
+  display: block;
+}
 
 #sidebar-wrapper {
-    background: #0959ad;
-    position: absolute;
+    background: #003366;
+    position: static;
     height: 100%;
     width: 20%;
     -webkit-transition: all .5s ease;
@@ -35,6 +37,7 @@
     -o-transition: all .5s ease;
 
 }
+
 
 #sidebar-wrapper:hover {
     width: 5%;
@@ -79,4 +82,15 @@
 }
 #sidebar-wrapper a.hidden {
     display: none;
+}
+
+
+#page-content-wrapper.not-collapsed{
+  width: 80%;
+  float: right;
+}
+
+#page-content-wrapper.collapsed{
+  width: 90%;
+  float: right;
 }

@@ -69,14 +69,14 @@
                 <li>
                     <a class="dropdown-toggle menu" data-toggle="dropdown" href="#" aria-expanded="false">
                         <i class="fa fa-home"></i>
-                        <a class="sidebar-text visible"> Home</a>
+                        <a class="sidebar-text visible" href="{% url "records_general" %}"> Home</a>
                     </a>
                 </li>
 
                 <li>
                     <a class="dropdown-toggle menu" data-toggle="dropdown" href="#" aria-expanded="false">
                         <i class="fa fa-calendar"></i>
-                        <a class="sidebar-text visible"> Calendar</a>
+                        <a class="sidebar-text visible" href="{% url "monthly_view" %}"> Calendar</a>
                     </a>
                 </li>
 
@@ -91,6 +91,7 @@
     </div>
     <!---------------------------------------------------------------------->
     <div id="page-content-wrapper">
+        {% block body_block %}{% endblock %}
 
     </div>
 
@@ -104,5 +105,8 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="{ % static "static_root/scripts/js/bootstrap.min.js"% }"></script>
 <script src="{ % static "static_root/scripts/js/sidebar.js"% }"></script>
+<script src="{% static "static_root/scripts/js/confirm_popup.js" %}"></script>
+
+
 </body>
 </html>

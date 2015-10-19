@@ -187,17 +187,17 @@ class EventEditMixin(EventEditPermissionMixin, EventMixin, CancelButtonMixin):
 
 
 class EventView(EventMixin, DetailView):
-    template_name = 'schedule/event.html'
+    template_name = 'agenda/event.html'#Este template fue modificado para que renderice los templates de medc
 
 
 class EditEventView(EventEditMixin, UpdateView):
     form_class = EventForm
-    template_name = 'schedule/create_event.html'
+    template_name = 'agenda/create_event.html'  #Este template fue modificado para que renderice los templates de medc
 
 
 class CreateEventView(EventEditMixin, CreateView):
     form_class = EventForm
-    template_name = 'schedule/create_event.html'
+    template_name = 'agenda/create_event.html'#Este template fue modificado para que renderice los templates de medc
 
     def get_initial(self):
         date = coerce_date_dict(self.request.GET)
@@ -224,7 +224,7 @@ class CreateEventView(EventEditMixin, CreateView):
 
 
 class DeleteEventView(EventEditMixin, DeleteView):
-    template_name = 'schedule/delete_event.html'
+    template_name = 'agenda/delete_event.html'#Este template fue modificado para que renderice los templates de medc
 
     def get_context_data(self, **kwargs):
         ctx = super(DeleteEventView, self).get_context_data(**kwargs)
@@ -239,7 +239,7 @@ class DeleteEventView(EventEditMixin, DeleteView):
         # If the key word argument redirect is set
         # Lastly redirect to the event detail of the recently create event
         """
-        next_url = self.kwargs.get('next') or reverse('day_calendar', args=[self.object.calendar.slug])
+        next_url = self.kwargs.get('next') or reverse('monthly_view_medc', args=[self.object.calendar.slug])
         next_url = get_next_url(self.request, next_url)
         return next_url
 

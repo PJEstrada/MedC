@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-{% load staticfiles %}
+{% load static from staticfiles %}
+{% load i18n %}
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -10,12 +11,13 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- Bootstrap -->
-    <link href="{% static "static_root/style/bootstrap/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "style/bootstrap/bootstrap.min.css" %}" rel="stylesheet">
     <!-- Fonts Awesome -->
-    <link href="{% static "static_root/font-awesome/css/font-awesome.css" %}" rel="stylesheet">
+    <link href="{% static "font-awesome/css/font-awesome.css" %}" rel="stylesheet">
     <!-- My CSS -->
-    <link href="{% static "static_root/users/styles/base/navbar.css" %}" rel="stylesheet">
-    <link href="{% static "static_root//users/styles/base/style.css" %}" rel="stylesheet">
+
+    <link href="{% static "styles/base/navbar.css" %}" rel="stylesheet">
+    <link href="{% static "styles/base/style.css" %}" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -70,39 +72,43 @@
 
 
     </div>
-    <!-----------------------side bar----------------------------------------------->
-    <div id="sidebar-wrapper" class="not-collapsed">
-        <nav class="sidebar-menu push-effect" id="sidebar-1">
-            <ul class="sidebar-nav">
-
-                <li>
-                    <a class="dropdown-toggle menu" data-toggle="dropdown" href="#" aria-expanded="false">
-                        <i class="fa fa-home"></i>
-                        <a class="sidebar-text visible"> Home</a>
-                    </a>
-                </li>
-
-                <li>
-                    <a class="dropdown-toggle menu" data-toggle="dropdown" href="#" aria-expanded="false">
-                        <i class="fa fa-calendar"></i>
-                        <a class="sidebar-text visible"> Calendar</a>
-                    </a>
-                </li>
-
-                <li>
-                    <a class="dropdown-toggle menu" data-toggle="dropdown" href="#" aria-expanded="false">
-                        <i class="fa fa-money"></i>
-                        <a class="sidebar-text visible"> Caja</a>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <!---------------------------------------------------------------------->
-    <div id="page-content-wrapper">
 
 
-    </div>
+</div>
+<!-----------------------side bar----------------------------------------------->
+<div id="sidebar-wrapper" class="not-collapsed">
+    <nav class="sidebar-menu push-effect" id="sidebar-1">
+        <ul class="sidebar-nav">
+
+            <li>
+                <a class="dropdown-toggle menu" data-toggle="dropdown" href="#" aria-expanded="false">
+                    <i class="fa fa-home"></i>
+                    <a class="sidebar-text visible"> Home</a>
+                </a>
+            </li>
+
+            <li>
+                <a class="dropdown-toggle menu" data-toggle="dropdown" aria-expanded="false">
+
+                    <i class="fa fa-calendar" ></i>
+                    <a class="sidebar-text visible" href="{%  url "monthly_view_medc" calendar_slug="clinica-american-cancer-society" %}"> {% trans "Agenda"%}</a>
+                  
+                </a>
+            </li>
+
+            <li>
+                <a class="dropdown-toggle menu" data-toggle="dropdown" href="#" aria-expanded="false">
+                    <i class="fa fa-money"></i>
+                    <a class="sidebar-text visible"> Caja</a>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!---------------------------------------------------------------------->
+<div id="page-content-wrapper" class="not-collapsed">
+    <!---Content--->
+    {% block body_block %} {% endblock %}
 
 </div>
 
@@ -112,7 +118,7 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="{% static "static_root/scripts/js/bootstrap.min.js" %}"></script>
-<script src="{% static "static_root/users/js/sidebar.js" %}"></script>
+<script src="{% static "scripts/js/bootstrap.min.js" %}"></script>
+<script src="{% static "users/js/sidebar.js" %}"></script>
 </body>
 </html>

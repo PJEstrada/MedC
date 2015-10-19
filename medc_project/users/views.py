@@ -39,6 +39,7 @@ def user_login(request):
     # The request is not a HTTP POST, so display the login form.
     # This scenario would most likely be a HTTP GET.
     else:
+        
         # No context variables to pass to the template system, hence the
         # blank dictionary object...
         return render(request, "users/login.html", {})
@@ -48,7 +49,7 @@ Function that logs the user out
 '''
 
 
-#@login_required(LOGIN_URL='/users/login/')
+@login_required()
 def user_logout(request):
     # Since we know the user is lloged in, we can now log them out
     logout(request)

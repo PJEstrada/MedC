@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+{% load scheduletags i18n %}
+{% load staticfiles %}
+
+{% block body_block %}
+
+    <div class="calendar-wrapper">
+        {% include "schedule/_dialogs.html" %}
+        <div class="row row-centered">
+          <div class="calendarname">{{ calendar.name }}</div>
+          {% prevnext "monthly_view_medc" calendar periods.month "F Y"%}
+
+          <div class="now row-centered">
+            <a href="{% url "monthly_view_medc" calendar.slug %}">
+              {% trans "This month" %}
+            </a>
+          </div>
+
+          <div class="center span7 calendario-mes" >
+            {% month_table calendar periods.month "regular" %}
+          </div>
+        </div>
+
+
+        <div class="row row-centered">
+            <div class="vistas">
+
+            </div>
+
+            <div class="botones-agregar-eventos">
+                <a href="{% url "create_event" calendar.slug %}"><button class="btn-add-event">{% trans "Agregar Nueva Cita" %}</button></a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

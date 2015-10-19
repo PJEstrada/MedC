@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block body_block %}
+        {% if search_query %}
+            <p>Buscaste la palabra: {{ search_query }}</p>
+        {% endif %}
+        <div class="records-tittle">
+            <h1>{% trans "Expedientes de Pacientes" %}</h1>
+
+            <form method="POST" action="{% url "records_search" %}" class="search_form">
+                {% csrf_token %}
+                <button class="record_search">Buscar</button>
+                <input type="text" name="search_query" placeholder="Buscar Expedientes">
+
+            </form>
+
+
+        </div>
+        <div class="records-container">
+            {% if expedientes_todos %}
+                {% for expediente in expedientes_todos %}
+                <div class="record">
+
+                    <div class="name">
+                        <a href="">{{ expediente.user.first_name }}  </a>
+                    </div>
+
+                </div>
+                {% endfor %}
+            {% else %}
+                {% if expedientes%}
+                    {% for expediente in expedientes %}
+                        <div class="record">
+
+                            <div class="name">
+                                <a href="">{{ expediente.user.first_name }}  </a>
+                            </div>
+
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endif %}
+        </div>
+
+{% endblock %}

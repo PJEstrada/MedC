@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-{% load staticfiles %}
-
+{% load static from staticfiles %}
 <html>
 
 <head>
@@ -9,9 +8,7 @@
 </head>
 
 <body>
-
-  <img src="{% static "static_root/images/404.jpg" %}" alt="Page Not Found (404)." style="position: absolute; left: 50%; top: 50%; margin-left: -285px; margin-top: -190px;">
-  <!-- <img src="{% static "static_root/images/1.png" %}"> -->
+  <img src="{% static "images/404.jpg" %}" alt="Page Not Found (404)." style="position: absolute; left: 50%; top: 50%; margin-left: -285px; margin-top: -190px;">
 </body>
 
 </html>

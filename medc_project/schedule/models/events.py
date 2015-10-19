@@ -49,16 +49,15 @@ class Event(with_metaclass(ModelBase, *get_model_bases())):
                                                 help_text=_("This date is ignored for one time only events."))
     calendar = models.ForeignKey(Calendar, null=True, blank=True, verbose_name=_("calendar"))
     objects = EventManager()
-    EVENT_TYPE = (
-        ('a', 'Cita Inicial'),
-        ('b', 'Consecutiva'),
-        ('c', 'Cirugia'),
-        ('d', 'otros')
+    CITAS_CHOICES = (
+        ('a', 'Paciente'),
+        ('b', 'Dr'),
+        ('c', 'Extra')
     )
     tipo_cita = models.CharField(max_length=2,
-                                      choices=EVENT_TYPE,
+                                      choices=CITAS_CHOICES,
                                       default='a')
-
+ 
 
     class Meta(object):
         verbose_name = _('event')
@@ -83,7 +82,7 @@ class Event(with_metaclass(ModelBase, *get_model_bases())):
     @property
     def hours(self):
         return float(self.seconds) / 3600
-
+        
     def get_absolute_url(self):
         return reverse('event', args=[self.id])
 

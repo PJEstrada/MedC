@@ -42,6 +42,8 @@ DJANGO_APPS = (
 THIRD_PARTY_APPS = (
     'schedule',
     'djangobower',
+    'storages',
+
 )
 MY_APPS = (
     'users',
@@ -68,7 +70,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            #TEMPLATE_PATH,
+            TEMPLATE_PATH,
             TEMP_PATH,
         ],
         'APP_DIRS': True,
@@ -127,5 +129,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static', 'static_root')
 STATICFILES_DIRS = (
     STATIC_PATH,
 )
+
+LOGIN_URL = '/users/login/'
 # AbstractUser in settings
 # AUTH_USER_MODEL = "profiles.ClinicUser"

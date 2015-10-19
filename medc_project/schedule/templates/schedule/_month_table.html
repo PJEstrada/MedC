@@ -1,5 +1,5 @@
 {% load scheduletags %}
-<table class="table-condensed table-striped">
+<table class="table-condensed table-striped medc-table">
 {% if day_names %}
 <thead>
   <th>&nbsp;</th>
@@ -8,14 +8,15 @@
   {% endfor %}
 </thead>
 {% endif %}
-<tbody>
+<body>
   {% for week in month.get_weeks %}
       <tr>
       <td>
           <a href="{% url "week_calendar" calendar.slug %}{% querystring_for_date week.start 3 True %}">
               {{week.start|date:"W"}}
-          </a>
+
       </td>
+      </a>
       {% for day in week.get_days %}
     {% day_cell calendar day month size %}
       {% endfor %}
