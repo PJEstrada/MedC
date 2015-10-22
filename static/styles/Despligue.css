@@ -1,0 +1,23 @@
+
+/* 
+    Created on : 19/10/2015, 12:21:45 PM
+    Author     : Moises Urias
+*/
+
+
+/*Esto permite que */
+.estadoCivil{
+    display: inline;
+}
+
+/*Esto permite agregar la fuente pacifico al Html
+  Se utiliza en los titulos*/
+.pacifico{
+    font-family: 'Pacifico',cursive;
+}
+
+/*Esta se utiliza en convinacion con la etiqueta paficico, para que esta se
+  mas grande*/
+.grande{
+    font-size: 3em;
+}

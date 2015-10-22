@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Despliegue de pacientes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link type="text/css" rel="stylesheet" href="static/styles/bootstrap.css">
+        <link rel="stylesheet" href="static/styles/Despligue.css" type="text/css"/>
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        
+    </head>
+    <body>
+        <div class="col-md-12 text-center">
+            <label class="pacifico grande">Despligue de pacientes</label><br/><br/>
+            <div id="informacion_perosonal">
+                <form role = "form" class="informacionPersonal form-horizontal">
+                    <label>Informacion personal</label>
+                    <div class ="form-group">
+                        <label for="Nombre_completo" class="col-lg-2 control-label">Nombre completo</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="Nombre_completo" placeholder="Nombre completo del paciente">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Apellidos" class="col-lg-2 control-label">Apellidos</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="Apellidos" placeholder="Apellidos del paciente">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Sexo</label>
+                        <div class="col-lg-10">
+                            <label>
+                                <input type="radio" name="sexo" id="sexoM" value="opcion_1">
+                                M
+                            </label>
+
+                            <label>
+                                <input type="radio" name="sexo" id="sexoF" value="opcion_2">
+                                F
+                            </label>
+                        </div>
+                    </div>    
+
+
+
+
+                    <!--
+                    <div class="form-group estadoCivil">
+                            <label class="col-lg-1 control-label" id="lblSoltero" for="radio_soltero">S</label> 
+                            <input type="radio" class="form-control col-lg-1 estadoCivil" id="radio_soltero">
+                            <label for="radio_casado" id="lblCasado">C</label>
+                            <input type="radio" class="form-control col-lg-1 estadoCivil" id="radio_casado">
+                            <label for="radio_divorciado" id="lblDivorciado">D</label>
+                            <input type="radio" class="form-control col-lg-1 estadoCivil" id="radio_divorciado">
+                            <label for="radio_viudo" id="lblViudo">V</label>
+                            <input type="radio" class="form-control estadoCivil" id="radio_viudo">
+
+                    </div>
+                    -->
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" id="lblEstado_civil">Estado civil</label>
+                        <div class="col-lg-10">
+                            <div class="form-group estadoCivil col-lg-2">
+                                <label>
+                                    <input type="radio" name="estadoCivil" id="ec_soltero" value="opcion_1">
+                                    Soltero
+                                </label>
+                            </div>
+
+                            <div class="form-group estadoCivil col-lg-2">
+                                <label>
+                                    <input type="radio" name="estadoCivil" id="ec_casado" value="opcion_2">
+                                    Casado
+                                </label>
+                            </div>
+
+                            <div class="form-gruop estadoCivil col-lg-2">
+                                <label>
+                                    <input type="radio" name="estadoCivil" id="ec_divorciado" value ="opcion_3">
+                                    Divorciado
+                                </label>
+                            </div>
+
+                            <div class="form-group estadoCivil col-lg-2">
+                                <label>
+                                    <input type="radio" name="estadoCivil" id="ec_viudo" value="opcion_4">
+                                    Viudo
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" id="lblCantidadHijos">Cantidad Hijos</label>
+                        <div class="col-lg-10">
+                                <div class="form-group  col-lg-2">
+                                    <label>
+                                        <input type="radio" name="cantidadHijos" id="ch_1" value="opcion_1">
+                                        1
+                                    </label>
+                                </div>
+
+                                <div class="form-group  col-lg-2">
+                                    <label>
+                                        <input type="radio" name="cantidadHijos" id="ch_2" value="opcion_2">
+                                        2
+                                    </label>
+                                </div>
+
+                                <div class="form-gruop  col-lg-2">
+                                    <label>
+                                        <input type="radio" name="cantidadHijos" id="ch_3" value ="opcion_3">
+                                        3
+                                    </label>
+                                </div>
+
+                                <div class="form-group  col-lg-2">
+                                    <label>
+                                        <input type="radio" name="cantidadHijos" id="ch_4" value="opcion_4">
+                                        4
+                                    </label>
+                                </div>
+                        </div>
+                    </div>        
+                    <!--    
+                        <label id="lblcantidadHijos">Cantidad hijos</label><br/>
+
+                        <label id="lbl1Hijo" for="radio1Hijo">1</label> 
+                        <input type="radio" class="form-control" id="radio1Hijo">
+
+                        <label for="radio2Hijos" id="lbl2Hijos">2</label>
+                        <input type="radio" class="form-control" id="radio2Hijos">
+
+                        <label for="radio_divorciado" id="lbl3Hijos">3</label>
+                        <input type="radio" class="form-control" id="radio3hijos">
+
+                        <label for="radio4Hijos" id="lbl4Hijos">4</label>
+                        <input type="radio" class="form-control" id="radio4Hijos">
+
+                        <label for="radioMasHijos" id="lblMasHijos">+</label>
+                        <input type="radio" class="form-control" id="radioMasHijos">
+
+                        <br/> <!-- Salto de linea -->
+
+                        <div class="form-gruop">
+                            <label class="col-lg-2 control-label" id="lblApellidoCasada" for="ApellidoCasada">Apellido Casada</label> 
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="ApellidoCaasada" placeholder="Apellido de casada">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="FechaNacimeinto" id="lblFechaNacimiento">Fecha Nacimeinto</label>
+                            <div class="col-lg-10">
+                                <input type="date" class="form-control" id="FechaNacimiento">
+                            </div> 
+                        </div>
+
+                        <div class="from-group">
+                            <label class="col-lg-2 control-label" for="Edad" id="lbledad">Edad</label>
+                            <div class="col-lg-10">
+                                <input type="number" class="form-control" id="Edad">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Nacionalidad" id="lblNacionalidad">Nacionalidad</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="Nacionalidad">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Ocupacion" id="lblOcupacion">Ocupacion</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="Ocupacion">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="DPI" id="lblDpi">DPI-CUI</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="DPI">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Pasaporte" id="lblPasaporte">Pasaporte</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="Pasaporte">
+                            </div>    
+                        </div>
+
+                        <div class="form-gruop">
+                            <label class="col-lg-2 control-label" for="NIT" id="lblNit">NIT</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="NIT">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Direccion" id="lblDireccion">Direccion</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="Direccion">
+                            </div>
+                        </div>
+
+                        <div class="form-gruop">
+                            <label class="col-lg-2 control-label" for="Telefono" id="lblTelefono">Telefono</label>
+                            <div class="col-lg-10">
+                                <input type="tel" class="form-control" id="Telefono">
+                            </div>
+                        </div>
+
+                        <div class="form-gruop">
+                            <label class="col-lg-2 control-label"   for="Celular" id="lblCelular">Celular</label>
+                            <div class="col-lg-10">
+                                <input type="tel" class="form-control" id="Celular">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label"   for="Fax" id="lblFax">Fax</label>
+                            <div class="col-lg-10">
+                                <input type="tel" class="form-control" id="Fax">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Email" id="lblEmail">Correo electronico</label>
+                            <div class="col-lg-10">
+                                <input type="email" class="form-control" id="Email">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Seguro" id="lblCuentaSeguro">Cuenta con seguro</label>
+                            <div class="col-lg-10">
+                                <div class="form-group col-lg-2">
+                                        <label>
+                                            <input name="seguro" type="radio"  id="siSeguro">
+                                            Si
+                                        </label>
+                                </div>
+
+                                    <div class="form-group col-lg-2">
+                                        <label for="noSeguro">
+                                            <input name="seguro" type="radio"  id="noSeguro">
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Aseguradora">Aseguradora</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="col-lg-10 form-control" id="Aseguradora" placeholder="Nombre aseguradora">
+                            </div>
+                        </div>
+                </form>
+            </div>
+            
+            
+            <div id="informacion_encargado">
+                <form role = "form" class="informacionEncargado form-horizontal">
+                    <label>Informacion esposo o encargado</label>
+                    <div class ="form-group">
+                        <label for="Nombre_completo" class="col-lg-2 control-label">Nombre completo</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="Nombre_completo" placeholder="Nombre completo del paciente">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Apellidos" class="col-lg-2 control-label">Apellidos</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="Apellidos" placeholder="Apellidos del paciente">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Encargado</label>
+                        <div class="col-lg-10">
+                            <label>
+                                <input type="checkbox" name="encargado" id="sexoM" value="opcion_1">
+                                
+                            </label>
+                        </div>
+                    </div>  
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Sexo</label>
+                        <div class="col-lg-10">
+                            <label>
+                                <input type="radio" name="sexo" id="sexoM" value="opcion_1">
+                                M
+                            </label>
+
+                            <label>
+                                <input type="radio" name="sexo" id="sexoF" value="opcion_2">
+                                F
+                            </label>
+                        </div>
+                    </div>    
+
+
+
+                   
+                        <div class="form-gruop">
+                            <label class="col-lg-2 control-label" id="lblApellidoCasada" for="ApellidoCasada">Apellido Casada</label> 
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="ApellidoCaasada" placeholder="Apellido de casada">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="FechaNacimeinto" id="lblFechaNacimiento">Fecha Nacimeinto</label>
+                            <div class="col-lg-10">
+                                <input type="date" class="form-control" id="FechaNacimiento">
+                            </div> 
+                        </div>
+
+                        <div class="from-group">
+                            <label class="col-lg-2 control-label" for="Edad" id="lbledad">Edad</label>
+                            <div class="col-lg-10">
+                                <input type="number" class="form-control" id="Edad">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Nacionalidad" id="lblNacionalidad">Nacionalidad</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="Nacionalidad">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Ocupacion" id="lblOcupacion">Ocupacion</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="Ocupacion">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="DPI" id="lblDpi">DPI-CUI</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="DPI">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Pasaporte" id="lblPasaporte">Pasaporte</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="Pasaporte">
+                            </div>    
+                        </div>
+
+                        <div class="form-gruop">
+                            <label class="col-lg-2 control-label" for="NIT" id="lblNit">NIT</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="NIT">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Direccion" id="lblDireccion">Direccion</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="Direccion">
+                            </div>
+                        </div>
+
+                        <div class="form-gruop">
+                            <label class="col-lg-2 control-label" for="Telefono" id="lblTelefono">Telefono</label>
+                            <div class="col-lg-10">
+                                <input type="tel" class="form-control" id="Telefono">
+                            </div>
+                        </div>
+
+                        <div class="form-gruop">
+                            <label class="col-lg-2 control-label"   for="Celular" id="lblCelular">Celular</label>
+                            <div class="col-lg-10">
+                                <input type="tel" class="form-control" id="Celular">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label"   for="Fax" id="lblFax">Fax</label>
+                            <div class="col-lg-10">
+                                <input type="tel" class="form-control" id="Fax">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Email" id="lblEmail">Correo electronico</label>
+                            <div class="col-lg-10">
+                                <input type="email" class="form-control" id="Email">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Seguro" id="lblCuentaSeguro">Cuenta con seguro</label>
+                            <div class="col-lg-10">
+                                <div class="form-group col-lg-2">
+                                        <label>
+                                            <input name="seguro" type="radio"  id="siSeguro">
+                                            Si
+                                        </label>
+                                </div>
+
+                                    <div class="form-group col-lg-2">
+                                        <label for="noSeguro">
+                                            <input name="seguro" type="radio"  id="noSeguro">
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Aseguradora">Aseguradora</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="col-lg-10 form-control" id="Aseguradora" placeholder="Nombre aseguradora">
+                            </div>
+                        </div>
+                </form>
+            </div>
+            
+            
+            
+            
+            <div id="informacion_laboral_paciente">
+                <form role = "form" class="informacionLaboral form-horizontal">
+                    <label>Informacion laboral del paciente</label>
+                    <div class ="form-group">
+                        <label for="Nombre_completo" class="col-lg-2 control-label">Lugar</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="Lugar" placeholder="Lugar">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Apellidos" class="col-lg-2 control-label">Puesto</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="Puesto" placeholder="Puesto">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="direccionLaboral" class="col-lg-2 control-label">Direccion</label>
+                        <div class="col-lg-10">
+                                <input type="text"  id="direccionLaboral" placeholder="Direccion">
+                        </div>
+                    </div>  
+                    
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Telefono</label>
+                        <div class="col-lg-10">
+                                <input type="tel" id="telefonoLaboral" placeholder="Telerfono">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Celular</label>
+                        <div class="col-lg-10">
+                                <input type="tel" id="celualrLaboral" placeholder="celular">
+                        </div>
+                    </div>  
+                    
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Fax</label>
+                        <div class="col-lg-10">
+                                <input type="tel" id="FaxLaboral" placeholder="Fax">
+                        </div>
+                    </div>
+
+                        <div class="form-gruop">
+                            <label class="col-lg-2 control-label" id="lblcorreoElectronicoLaboral" for="ApellidoCasada">Correo electronico</label> 
+                            <div class="col-lg-10">
+                                <input type="email" class="form-control" id="correoElectronicoLaboral" placeholder="Apellido de casada">
+                            </div>
+                        </div>  
+                </form>
+            </div>
+            
+            <div id="referidoPorMedico">
+                <form role = "form" class="referidoMedico form-horizontal">
+                    <label>Referida(o) por Medico</label>
+                    <div class ="form-group">
+                        <label for="NombreMedico" class="col-lg-2 control-label">Nombre Medico</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="NombreMedico" placeholder="Nombre del medico">
+                        </div>
+                    </div>
+
+                    
+                    
+                    <div class="form-group">
+                        <label for="direccionLaboral" class="col-lg-2 control-label">Direccion</label>
+                        <div class="col-lg-10">
+                                <input type="text"  id="direccionLaboral" placeholder="Direccion">
+                        </div>
+                    </div>  
+                    
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Telefono</label>
+                        <div class="col-lg-10">
+                                <input type="tel" id="telefonoLaboral" placeholder="Telerfono">
+                        </div>
+                    </div>    
+                    
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Celular</label>
+                        <div class="col-lg-10">
+                                <input type="tel" id="celualrMedico" placeholder="celular">
+                        </div>
+                    </div>  
+                    
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Fax</label>
+                        <div class="col-lg-10">
+                                <input type="tel" id="FaxMedico" placeholder="Fax">
+                        </div>
+                    </div> 
+                    
+                    <div class="form-group">
+                        <label for="emailMedico" class="col-lg-2 control-label">Correo electronico</label>
+                        <div class="col-lg-10">
+                            <input type="email" class="form-control" id="emailMedico" placeholder="Correo electronico del medico">
+                        </div>
+                    </div>
+
+                    <div class="form-gruop">
+                        <label class="col-lg-2 control-label" id="lblEnfermedadesPadecidas" for="enfermedadesPadecidas">Enfermedades padecidas</label> 
+                        <div class="col-lg-10">
+                            <input type="email" class="form-control" id="enfermedadesPadecidads" placeholder="">
+                        </div>
+                    </div>  
+                    
+                    <div class="form-gruop">
+                            <label class="col-lg-2 control-label" id="lblAlergiasConocidas" for="alergiasConocidas">Alergias conocidas</label> 
+                            <div class="col-lg-10">
+                                <input type="email" class="form-control" id="alergiasConocidas" placeholder="Alergias conocidas">
+                            </div>
+                        </div> 
+                </form>
+            </div>
+  
+        </div>
+    </body>
+</html>
