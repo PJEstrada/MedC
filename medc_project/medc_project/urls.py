@@ -31,8 +31,8 @@ urlpatterns = [
 if not settings.DEBUG:
     urlpatterns += (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
 
-handler404 = 'medc.views.error404'
-handler500 = 'medc.views.error404'
-handler400 = 'medc.views.error404'
+# handler404 = 'medc.views.error404'
+# handler500 = 'medc.views.error404'
+# handler400 = 'medc.views.error404'
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

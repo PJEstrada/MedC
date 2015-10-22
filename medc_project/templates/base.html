@@ -92,7 +92,7 @@
 
                     <i class="fa fa-calendar" ></i>
                     <a class="sidebar-text visible" href="{%  url "monthly_view_medc" calendar_slug="clinica-american-cancer-society" %}"> {% trans "Agenda"%}</a>
-                  
+
                 </a>
             </li>
 
@@ -102,6 +102,13 @@
                     <a class="sidebar-text visible"> Caja</a>
                 </a>
             </li>
+            <li>
+                <a class="dropdown-toggle menu" data-toggle="dropdown" href="{% url "records_general" %}" aria-expanded="false">
+                  <span class="glyphicon glyphicon-folder-open" href="{% url "records_general" %}"></span>
+                  <a class="sidebar-text visible" href="{% url "records_general" %}"> Records</a>
+                </a>
+            </li>
+
         </ul>
     </nav>
 </div>

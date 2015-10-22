@@ -27,7 +27,7 @@ def user_login(request):
                 # If the account is valid and active, we can log the user in.
                 # We'll send the user back to the homepage.
                 login(request, user)
-                return HttpResponseRedirect('/medc/base') # WHEREVER WE'RE GONNA SEND THEM
+                return HttpResponseRedirect('/medc') # WHEREVER WE'RE GONNA SEND THEM
             else:
                 # An inactive account was used - no logging in!
                 return HttpResponse("Su cuenta ha sido desactivada.")
@@ -39,7 +39,7 @@ def user_login(request):
     # The request is not a HTTP POST, so display the login form.
     # This scenario would most likely be a HTTP GET.
     else:
-        
+
         # No context variables to pass to the template system, hence the
         # blank dictionary object...
         return render(request, "users/login.html", {})
