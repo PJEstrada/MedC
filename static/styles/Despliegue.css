@@ -20,4 +20,9 @@
   mas grande*/
 .grande{
     font-size: 3em;
+    
+}
+
+label{
+    text-align: left;
 }
