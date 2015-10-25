@@ -1,0 +1,65 @@
+<!--
+Author:Medc Jorge García
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<body id="caja">
+	<br>
+  	<br>
+  	<h2 align="center">Nuevo Pago</h2>
+  		
+  		<div class="container" id="datos">
+		    <form>
+        <label>Nombres</label><input type="text" class="text" value="Nombre" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail address';}"><br/><br>
+        <label>Apellido paterno</label><input type="text" class="text" value="Apellido" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-    mail address';}"><br/><br>
+        <label>Apellido materno</label><input type="text" value="Apellido" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+        <br>
+        </form>
+			</div>
+		  <br/>
+
+
+  	<div data-role="fieldcontain">
+	<fieldset data-role="controlgroup">
+    	<legend>Productos:</legend>
+        
+       <input id="checkbox-1" class="custom" type="checkbox" name="checkbox-1" />
+        <label for="checkbox-1">cita</label>
+        
+        <input id="checkbox-2" class="custom" type="checkbox" name="checkbox-2" />
+        <label for="checkbox-2">inyeccion</label>
+        
+        <input id="checkbox-3" class="custom" type="checkbox" name="checkbox-3" />
+        <label for="checkbox-3">medicamento</label>
+   	</fieldset>
+	</div>
+  <br/><br>
+
+
+  <div id="fecha">
+  <label>Fecha</label><input type="date" class="text" value="Nombre" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail address';}">
+  </div>
+  <br/><br>
+  
+  <div class="container">
+    <legend>Seguro:</legend>
+    <select>
+    <option value="Ninguno">Ninguno</option>
+    <option value="Universales">Universales</option>
+    <option value="Roble">Roble</option>
+    <option value="General">General</option>
+    </select>
+  </div><br/><br>
+
+  
+
+  <label>Monto</label><input type="text" class="text" value="0" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail address';}">
+
+  <button type="button">Submit</button>
+
+</body>
+</html>

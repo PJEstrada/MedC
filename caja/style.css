@@ -1,0 +1,34 @@
+
+
+/*-- caja --*/
+
+
+#datos label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 120px;
+    text-align: left;
+}
+
+#datos input {
+  display: inline-block;
+  float: left;
+
+}
+
+
+#fecha label{
+ display: inline-block;
+    float: left;
+    clear: left;
+    width: 120px;
+    text-align: left;
+}
+
+#fecha input {
+  display: inline-block;
+  float: left;
+
+}
+

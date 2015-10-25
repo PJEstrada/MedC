@@ -1,0 +1,269 @@
+
+
+/*-- login --*/
+
+h2.form-heading {
+  margin: 0;
+  text-align: center;
+  color:#000;
+  font-size: 18px;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 100%;
+}
+body#login{
+   background: #337ab7;
+  
+}
+.app-cam {
+  width:22%;
+  margin:3em auto auto auto;
+}
+.app-cam input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  color: #999;
+  font-size: 0.85em;
+  outline: none;
+  font-weight: 300;
+  border: none;
+  background:#222224;
+  margin:0 0 1em 0;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+.app-cam input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  color:#999;
+  font-size: 0.85em;
+  outline: none;
+  font-weight: 300;
+  border: none;
+  background:#222224;
+  margin:0 0 1em 0;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+.app-cam input[type="submit"], .btn-success1{
+  font-size: 14px;
+  font-weight: 300 !important;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  padding: 10px 15px;
+  width: 100%;
+  border: none;
+  background: rgb(6, 217, 149);
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  text-transform: uppercase;
+}
+.app-cam input[type="submit"]:hover, .btn-success1:hover{
+  background:rgb(1, 200, 136);
+  color:#fff !important;
+}
+.login-social-link {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.login-social-link a {
+  color: #fff;
+  padding: 13px 38px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  width: 46.5%;
+  text-align: center;
+}
+.login-social-link a.facebook {
+  background: #3b5999;
+  margin-right: 22px;
+  float: left;
+}
+.login-social-link a:hover.facebook{
+  background:#2B4886 !important;
+  text-decoration:none;
+}
+.login-social-link a.twitter {
+  background: #63c6ff;
+  float: left;
+}
+.login-social-link a:hover.twitter{
+  background:#46ACE7 !important;
+  text-decoration:none;
+}
+ul.new {
+  margin:2em 0 0 0;
+  list-style:none;
+  padding:0;
+}
+ul.new li.new_left{
+  float: left;
+}
+ul.new li.new_left p, p.sign{
+  font-weight:300;
+} 
+p.sign a, ul.new li.new_left p a{
+  color:#000;
+}
+ul.new li.new_right{
+  float: right;
+}
+.app-cam p {
+  color:#000;
+  font-size: 14px;
+  margin: 1em 0;
+}
+
+.link1 {
+  padding: 5px 5px;
+}
+.wid_blog-desc {
+  padding:2.4em 1em;
+}
+.panel_2 {
+  padding: 2em 1em 0;
+}
+.online-top {
+  padding: 11px;
+}
+.app-cam {
+  width: 27%;
+}
+.navbar-right {
+  margin-right: -10px;
+}
+.content-box-wrapper {
+  padding: 1em;
+}
+i.icon_4 {
+  margin-right: 10px;
+}
+span.badge {
+  right: 10px;
+}
+}
+@media (max-width:768px){	
+.navbar-right {
+  margin-right:3px !important;
+}
+.col-md-3.widget {
+  width:100%;
+  float:none;
+}
+.span_7, .span_8, .col_4{
+  padding:0;
+}
+.span_8, .stats-info, .col_4{
+  margin-bottom:1em;
+}
+.span_4 {
+  padding: 0;
+  margin:1em 0;
+}
+.col_1_of_2.span_1_of_2 {
+  width: 50%;
+  float: left;
+}
+.graph_box {
+  text-align: center;
+}
+.grid_2 {
+  padding: 0;
+  margin-bottom: 1em;
+}
+.graph_box1 {
+  text-align: center;
+}
+.col-md-8.inbox_right {
+  padding: 0;
+  margin-top:1em;
+}
+.col-md-4.widget_1_box1 {
+  margin-bottom: 1em;
+}
+.follow {
+  padding: 1em;
+}
+.coffee-top{
+	text-align:center;
+}
+.coffee-top img{
+  display:inline-block;
+}
+.stats-info3{ 
+  padding:0;
+  margin-bottom:1em;
+}
+.widget_1_box2 {
+  padding: 0;
+  margin-top: 1em;
+}
+.wid_blog-desc {
+  padding: 1em;
+}
+.copy_layout {
+  margin: 1em 0 0em 0;
+}
+.login-social-link a.facebook {
+  margin-right: 10px;
+}
+.app-cam {
+  width: 30%;
+}
+.login-social-link a {
+  padding: 10px 15px;
+  width: 47.5%;
+}
+ul.new li.new_left, ul.new li.new_right {
+  float: none;
+}
+.coffee-top i {
+  top: 88%;
+  background: url(../images/1.png)no-repeat center;
+  left: 44%;
+  background-size: 70%;
+}
+
+.logo-element {
+  padding: 17px 0;
+}
+
+.login-logo {
+  padding: 40px 0;
+}
+.float-left, .pull-left {
+  width: 50%;
+}
+.mail-toolbar.clearfix {
+  padding: 1em 0;
+}
+
+td.head {
+  font-size:1em !important;
+}
+}
+@media (max-width:320px){
+.graphs {
+  padding: 20px 10px;
+}
+
+h2.form-heading {
+  font-size: 16px;
+}  
+
+
+body#login {
+  min-height: 500px;
+
+}
