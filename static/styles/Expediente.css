@@ -26,3 +26,22 @@
 label{
     text-align: left;
 }
+
+/*Permite que todos los campos tengo un ancho de 20%*/
+.i{
+    width: 20%;
+    margin-right: 3%;
+}
+
+/*Esto permite añadir la fuente pacifico al html*/
+.pacifico{
+    font-family: 'Pacifico', cursive;
+}
+
+.quitar-float{
+    float: none;
+}
+
+.espacio{
+    
+}
