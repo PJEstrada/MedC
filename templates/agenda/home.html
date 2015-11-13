@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% block body_block %}
+    <h1 class="welcome-message">Bienvenido: {{ user.username }}</h1>
+    <div class="welcome-image">
+        <img class="main-image" src="{% static "images/1322955.png" %}" alt="">
+    </div>
+
+    
+{% endblock %}

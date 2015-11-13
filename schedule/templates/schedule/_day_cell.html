@@ -1,0 +1,32 @@
+{% load scheduletags %}
+{% ifnotequal day.start.month month.start.month %}
+  <td class="muted"></td>
+
+
+{% else %}
+
+  {% if day.has_occurrences %}
+      <td class="btn-primary gradient">
+          <a href="{% url "daily_view" calendar.slug %}{% querystring_for_date day.start 3 True %}">
+          <div>
+              <strong>{{day.start.day}}</strong>
+          </div>
+          </a>
+      </td>
+  {% else %}
+       <td>
+          <a class="nuevo-cuadro" href="{% url "daily_view" calendar.slug %}{% querystring_for_date day.start 3 True %}">
+          <div>
+            <strong>{{day.start.day}}</strong>
+          </div>
+          </a>
+      </td>
+  {% endif %}
+
+
+
+  {% ifnotequal size "small" %}
+    
+  {% endifnotequal %}
+
+{% endifnotequal %}

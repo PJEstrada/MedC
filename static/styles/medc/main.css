@@ -1,0 +1,135 @@
+
+*{
+    font-family: 'Nunito', sans-serif;
+
+}
+body{
+    height: 100%;
+}
+.calendar-wrapper{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.calendar-wrapper table{
+
+    margin: auto;
+    width: 95%;
+    height: 400px;
+}
+
+table a{
+    color:#000000 ;
+
+}
+
+.modal-dialog .modal-body table{
+    width: 100%;
+
+}
+
+.calendario-mes td:hover{
+    background-color: #006699;
+    opacity: 0.6;
+}
+.calendario-mes div:hover{
+    color: whitesmoke;
+
+}
+.glyphicon.glyphicon-circle-arrow-left{
+    font-size: 35px;
+
+}
+.glyphicon.glyphicon-circle-arrow-right{
+    font-size: 35px;
+
+}
+
+
+.medc-table{
+    border: 1px solid black;
+    border-collapse: separate;
+    border-spacing: 0px;
+}
+.medc-table td{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.btn-add-event{
+    margin-top: 25px;
+    background-color: #003366;
+    color: white;
+    font-size: 1.3em;
+    width: 300px;
+    height: 100px;
+    border-radius: 20px;
+}
+.btn-add-event:hover{
+    opacity: 0.9;
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #eee;
+    opacity: 0.8;
+
+}
+
+/*-------------CSS RECORDS---------------*/
+
+.records-tittle h1{
+    text-align: center;
+    margin: 30px;
+    display: block;
+    width: 60%;
+    display: inline-block;
+
+}
+.records-tittle input{
+    float: right;
+    width: 20%;
+    margin: 30px;
+    display: inline-block;
+
+}
+.record{
+    margin-top: 15px;
+    height: 50px;
+    border-spacing: 2px;
+    border-color: grey;
+    border-top: 1px solid #ddd;
+    opacity: 0.8;
+    margin: auto;
+    padding-left: 15px;
+    line-height: 50px;
+
+
+}
+.records-container{
+    margin: auto;
+    width: 90%;
+
+}
+.record:nth-child(even){
+    background-color: #eee;
+}
+.search_form{
+    display: inline;
+    width: 20%;
+}
+.record_search{
+    float: right;
+    margin-top: 25px;
+    margin-right: 25px;
+    background-color: #003366;
+    color: white;
+    font-size: 1.3em;
+    height: 35px;
+    width: 100px;
+    border-radius: 20px;
+
+}
+
+.record:hover{
+    opacity: 0.9;
+    background-color: lightblue;
+}

@@ -1,0 +1,51 @@
+
+/* 
+    Created on : 19/10/2015, 12:21:45 PM
+    Author     : Moises Urias
+*/
+
+/*Permite que todos los campos tengo un ancho de 20%*/
+.i{
+    width: 20%;
+    margin-right: 3%;
+}
+
+/*Esto permite añadir la fuente pacifico al html*/
+.pacifico{
+    font-family: 'Pacifico', cursive;
+}
+
+.quitar-float{
+    float: none;
+}
+
+
+/*Esto permite que */
+.estadoCivil{
+    display: inline;
+}
+
+/*Esto permite agregar la fuente pacifico al Html
+  Se utiliza en los titulos*/
+.pacifico{
+    font-family: 'Pacifico',cursive;
+}
+
+/*Esta se utiliza en convinacion con la etiqueta paficico, para que esta se
+  mas grande*/
+.grande{
+    font-size: 3em;
+    
+}
+
+label{
+    text-align: left;
+}
+.expediente_form{
+    margin-left: 25px;
+
+}
+div.form-group:hover{
+    background-color:#ADC4C6;
+
+}

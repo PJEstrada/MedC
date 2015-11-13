@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load scheduletags i18n %}
+
+{% block body_block %}
+
+    {% include "schedule/_dialogs.html" %}
+
+    <div class="row row-centered">
+      <a href="{% url "monthly_view_medc" calendar.slug %}{% querystring_for_date periods.week.start 2 True %}">
+        {% trans "Ver todo el mes" %}
+      </a>
+
+    </div>
+
+    <div class="row row-centered">
+        <div class="calendarname"><h1>{{ calendar.name }}</h1></div>
+        {% prevnext "weekly_view_medc" calendar periods.week "\W\e\ek W, M Y" %}
+        <div class="now">
+          <a href="{% url "weekly_view_medc" calendar.slug %}">
+            {% trans "Esta Semana" %}
+          </a>
+        </div>
+    </div>
+
+    <div class="row row-centered">
+      {% for day in periods.week.get_days %}
+        <div class="col-md-3">
+          <div class="row row-centered">
+            <a href="{% url "daily_view" calendar.slug %}{% querystring_for_date day.start 3 True %}">
+              {{day.start|date:"l, d"}}
+            </a>
+          </div>
+          {% if forloop.first %}
+              {% daily_table day %}
+          {% else %}
+              {% daily_table day %}
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+
+{% endblock %}

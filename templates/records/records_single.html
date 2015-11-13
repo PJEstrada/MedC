@@ -1,0 +1,430 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+
+
+{% block body_block %}
+        <div class="col-md-12 text-center expediente_form">
+            <label class=""><h1>Despligue de pacientes</h1></label>
+            <fieldset id="informacionPersonal">
+                <legend><h2>Informacion personal</h2></legend>
+                <div id="informacion_perosonal">
+                    <form   role = "form" class="informacionPersonal form-horizontal">
+
+                        <div class ="form-group">
+                            <label for="Nombre_completo" class="col-lg-2 control-label">Nombre completo</label>
+                            <div class="col-lg-10">
+                                <span>{{expediente.nombre}}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Apellidos" class="col-lg-2 control-label">Apellidos</label>
+                            <div class="col-lg-10">
+                                <span>{{expediente.apellido}}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Sexo</label>
+                            <div class="col-lg-10">
+                                 <span>{{expediente.sexo}}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" id="lblEstado_civil">Estado civil</label>
+
+                            <div class="form-group estadoCivil col-lg-2">
+                                <span>{{expediente.estado_civil}}</span>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" id="lblCantidadHijos">Cantidad hijos</label>
+                            <div class="col-lg-10">
+                                    <span>{{expediente.cantidad_hijos}}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" id="lblApellidoCasada" >Apellido casada</label>
+                            <div class="col-lg-10">
+                                <span>{{expediente.apellidocasadoPaciente}}</span>
+                            </div>
+                        </div>
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label " id="lblFechaNacimiento" for="FechaNacimeinto">Fecha nacimeinto</label>
+                                    <div class="col-lg-10">
+                                        <span>{{expediente.fechaNacimientoPaciente}}</span>
+                                    </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="Edad" id="lbledad">Edad</label>
+                                <div class="col-lg-10">
+                                    <span>{{expediente.edadPaciente}}</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="Nacionalidad" id="lblNacionalidad">Nacionalidad</label>
+                                <div class="col-lg-10">
+                                    <span>{{expediente.nacionalidadPaciente}}</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="Ocupacion" id="lblOcupacion">Ocupación</label>
+                                <div class="col-lg-10">
+                                    <span>{{expediente.ocupacionPaciente}}</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="DPI" id="lblDpi">DPI-CUI</label>
+                                <div class="col-lg-10">
+                                    <span>{{expediente.dpiPaciente}}</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="Pasaporte" id="lblPasaporte">Pasaporte</label>
+                                <div class="col-lg-10">
+                                    <span>{{expediente.pasaportePaciente}}</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="NIT" id="lblNit">NIT</label>
+                                <div class="col-lg-10">
+                                    <span>{{expediente.nitPaciente}}</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="Direccion" id="lblDireccion">Dirección</label>
+                                <div class="col-lg-10">
+                                    <span>{{expediente.direccionPaciente}}</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="Telefono" id="lblTelefono">Teléfono</label>
+                                <div class="col-lg-10">
+                                    <span>{{expediente.telefonoPaciente}}</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label"   for="Celular" id="lblCelular">Celular</label>
+                                <div class="col-lg-10">
+                                    <span>{{expediente.celularPaciente}}</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label"   for="Fax" id="lblFax">Fax</label>
+                                <div class="col-lg-10">
+                                     <span>{{expediente.faxPaciente}}</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="Email" id="lblEmail">Correo electrónico</label>
+                                <div class="col-lg-10">
+                                    <span>{{expediente.emailPaciente}}</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="Seguro" id="lblCuentaSeguro">Cuenta con seguro</label>
+                                    <div class="col-lg-10">
+
+                                            <span>{{expediente.seguroPaciente}}</span>
+
+                                    </div>
+                                </div>
+
+
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="Aseguradora">Aseguradora</label>
+                                <div class="col-lg-10">
+                                    <span>{{expediente.aseguradora}}</span>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend><h2>Informacion esposo o encargado</h2></legend>
+                <div id="informacion_encargado">
+                <form role = "form" class="informacionEncargado form-horizontal">
+
+                    <div class ="form-group">
+                        <label for="Nombre_completo" class="col-lg-2 control-label">Nombre completo</label>
+                        <div class="col-lg-10">
+                             <span>{{expediente.nombreEncargado}}</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Apellidos" class="col-lg-2 control-label">Apellidos</label>
+                        <div class="col-lg-10">
+                             <span>{{expediente.apellidoEncargado}}</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Encargado</label>
+                        <div class="col-lg-10">
+                                 <span>{{expediente.encargado}}</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Sexo</label>
+                        <div class="col-lg-10">
+                             <span>{{expediente.sexoEncargado}}</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" id="lblApellidoCasada" for="ApellidoCasada">Apellido casada</label>
+                        <div class="col-lg-10">
+                            <span>{{expediente.apellidoCasadoEncargado}}</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="FechaNacimeinto" id="lblFechaNacimiento">Fecha nacimeinto</label>
+                        <div class="col-lg-10">
+                            <span>{{expediente.fechaNacimeintoEncargado}}</span>
+                        </div>
+                    </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Edad" id="lbledad">Edad</label>
+                            <div class="col-lg-10">
+                                 <span>{{expediente.edadEncargado}}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Nacionalidad" id="lblNacionalidad">Nacionalidad</label>
+                            <div class="col-lg-10">
+                                 <span>{{expediente.nacionalidadEncargado}}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Ocupacion" id="lblOcupacion">Ocupación</label>
+                            <div class="col-lg-10">
+                                 <span>{{expediente.ocupacionEncargado}}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="DPI" id="lblDpi">DPI-CUI</label>
+                            <div class="col-lg-10">
+                                 <span>{{expediente.dpiEncargado}}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Pasaporte" id="lblPasaporte">Pasaporte</label>
+                            <div class="col-lg-10">
+                                 <span>{{expediente.pasaporteEncargado}}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="NIT" id="lblNit">NIT</label>
+                            <div class="col-lg-10">
+                                 <span>{{expediente.nitEncargado}}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Direccion" id="lblDireccion">Dirección</label>
+                            <div class="col-lg-10">
+                                 <span>{{expediente.direccionEncargado}}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Telefono" id="lblTelefono">Teléfono</label>
+                            <div class="col-lg-10">
+                                 <span>{{expediente.telefonoEncargado}}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label"   for="Celular" id="lblCelular">Celular</label>
+                            <div class="col-lg-10">
+                                 <span>{{expediente.celularPaciente}}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label"   for="Fax" id="lblFax">Fax</label>
+                            <div class="col-lg-10">
+                                 <span>{{expediente.celularPaciente}}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Email" id="lblEmail">Correo electrónico</label>
+                            <div class="col-lg-10">
+                                 <span>{{expediente.emailEncargado}}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Seguro" id="lblCuentaSeguro">Cuenta con seguro</label>
+                            <div class="col-lg-10">
+
+                                  <span>{{expediente.seguroEncargado}}</span>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label" for="Aseguradora">Aseguradora</label>
+                            <div class="col-lg-10">
+                                 <span>{{expediente.aseguradoraEncargado}}</span>
+                            </div>
+                        </div>
+                </form>
+            </div>
+            </fieldset>
+
+
+
+
+            <fieldset>
+                <legend><h2>Informacion laboral del paciente</h2></legend>
+                <div id="informacion_laboral_paciente">
+                <form role = "form" class="informacionLaboral form-horizontal">
+
+                    <div class ="form-group">
+                        <label for="Nombre_completo" class="col-lg-2 control-label">Lugar</label>
+                        <div class="col-lg-10">
+                             <span>{{expediente.lugarLaboralPaciente}}</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Apellidos" class="col-lg-2 control-label">Puesto</label>
+                        <div class="col-lg-10">
+                             <span>{{expediente.puestoPaciente}}</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="direccionLaboral" class="col-lg-2 control-label">Dirección</label>
+                        <div class="col-lg-10">
+                                 <span>{{expediente.direccionLaboralPaciente}}</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Teléfono</label>
+                        <div class="col-lg-10">
+                                <span>{{expediente.telefonoLaboralPaciente}}</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Celular</label>
+                        <div class="col-lg-10">
+                                 <span>{{expediente.celularLaboralPaciente}}</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Fax</label>
+                        <div class="col-lg-10">
+                                 <span>{{expediente.faxLaboralPaciente}}</span>
+                        </div>
+                    </div>
+
+                        <div class="form-gruop">
+                            <label class="col-lg-2 control-label" id="lblcorreoElectronicoLaboral">Correo electrónico</label>
+                            <div class="col-lg-10">
+                                 <span>{{expediente.emailLaboral}}</span>
+                            </div>
+                        </div>
+                </form>
+            </div>
+            </fieldset>
+
+            <fieldset>
+                 <legend><h2>Referida(o) por Medico</h2></legend>
+                <div id="referidoPorMedico">
+                <form role = "form" class="referidoMedico form-horizontal">
+
+                    <div class ="form-group">
+                        <label for="NombreMedico" class="col-lg-2 control-label">Nombre médico</label>
+                        <div class="col-lg-10">
+                             <span>{{expediente.nombreMedico}}</span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="direccionLaboral" class="col-lg-2 control-label">Dirección</label>
+                        <div class="col-lg-10">
+                                 <span>{{expediente.direccionMedico}}</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Teléfono</label>
+                        <div class="col-lg-10">
+                                 <span>{{expediente.telefonoMedico}}</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Celular</label>
+                        <div class="col-lg-10">
+                                 <span>{{expediente.celularMedico}}</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Fax</label>
+                        <div class="col-lg-10">
+                                 <span>{{expediente.faxMedico}}</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emailMedico" class="col-lg-2 control-label">Correo electrónico</label>
+                        <div class="col-lg-10">
+                            <span>{{expediente.emailMedico}}</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" id="lblEnfermedadesPadecidas" for="enfermedadesPadecidas">Enfermedades padecidas</label>
+                        <div class="col-lg-10">
+                             <span>{{expediente.enfermedades}}</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                            <label class="col-lg-2 control-label" id="lblAlergiasConocidas" for="alergiasConocidas">Alergias conocidas</label>
+                            <div class="col-lg-10">
+                                <span>{{expediente.alergias}}</span>
+                            </div>
+                        </div>
+                </form>
+            </div>
+            </fieldset>
+
+        </div>
+{% endblock %}

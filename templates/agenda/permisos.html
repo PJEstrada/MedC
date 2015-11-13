@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% load i18n %}
+
+{% block body_block %}
+
+
+<p>No tienes permisos para ver esta pagina. Por favor consultado con el administrador</p>
+    <p> <a href="{% url "logout" %}">Accede con un usuario adecuado</a></p>
+{% endblock %}
+

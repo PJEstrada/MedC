@@ -1,0 +1,44 @@
+
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Is anyone getting tired of repeatedly entering the header over and over?? -->
+        <!-- Yes. -->
+        <title>{% block head_title %}MedC Login{% endblock %}</title>
+         <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+        <link href="{% static "styles/users/login.css" %}" rel="stylesheet">
+    </head>
+
+<body>
+
+ {% block body_block %}
+
+<div class="container-main">
+     <img class="logo" src="{% static "images/1322955.png" %}" alt="">
+
+    <form class="form-signin" role="form" method="post" action=".">
+        {% csrf_token %}
+        <h2 class="form-signin-heading">MedC Login: </h2>
+        <input class="form-control" placeholder="Correo Electronico" id="id_username" maxlength="254" name="username" type="text" required autofocus=""/>
+        <input type="password" class="form-control" placeholder="Contrasena" id="id_password" name="password" type="password" required />
+        {% if messages %}
+            {% for message in messages %}
+                <p class="error">{{ message }}</p>
+            {% endfor %}
+
+        {% endif %}
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit" value="Submit" />Log in</button>
+</form>
+
+
+
+</div>
+
+{% endblock %}
+
+
+</body>
+</html>

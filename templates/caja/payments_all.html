@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% load i18n %}
+
+{% block body_block %}
+
+
+      <h1 class = "tittle-caja" align="center">Control de Pagos</h1>
+        {% if exito %}
+            <p class="exito-pago">{{ exito }}</p>
+        {% endif %}
+      <div class="container" id="campos">
+            <form method="post" id="search_payment"action="{% url "payments_search"%}">
+                {% csrf_token %}
+              <label class="fecha_inicio"> Inicio </label>
+              <input class="fecha_inicio" required name="inicio" type="date" class="text"  >
+              <label class="fecha_fin">Fin</label>
+              <input class="fecha_fin" required name="fin" type="date" >
+
+          <div class="clearer"></div>
+
+         <div class="search-container">
+             <button class = "buton-caja" type="submit">Buscar</button>
+              </form>
+
+             <a href="{% url "payments_add" %}"><button class = "buton-caja nuevo-pago" type="button"> (+) Nuevo Pago</button></a>
+         </div>
+      <div class="clearer"></div>
+      </div>
+      <br>
+      
+      <div class="container" id="tabla">
+         <table class = "tabla-caja">
+             <th>Nombre</th>
+             <th>Monto</th>
+             <th>Fecha</th>
+             <th>Descripción</th>
+            <th>Seguro</th>
+            {% for pago in pagos %}
+             <tr class="row-pagos">
+
+                <td> {{ pago.customer_nombre }} {{ pago.customer_apellido }} {{ pago.customer_segundo_apellido }}</td>
+                <td> Q.{{  pago.total}}</td>
+                <td> {{ pago.date }}</td>
+                <td> {{ pago.date|truncatechars:25 }}</td>
+                <td> {{ pago.insurance }}</td>
+            </tr>
+             {% endfor %}
+
+         </table>
+      </div>
+    <h3>Total de pagos: {{ suma }}</h3>
+{% endblock %}
+

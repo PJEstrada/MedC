@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% load i18n %}
+
+{% block body_block %}
+
+  	<h2 class="tittle-nuevo-pago" align="center">Nuevo Pago</h2>
+  		{% if messages %}
+            {% for message in messages %}
+                <p class="error-pago">{{ message }}</p>
+
+            {% endfor %}
+        {% endif %}
+  		<div class="container" id="datos">
+		    <form method="post" class="datos-pago" action="{% url "payments_create" %}">
+              {% csrf_token %}
+               <label>Nombre: </label>{{ form.customer_nombre }}{{ form.customer_nombre.errors }}
+                <label>Apellido paterno: </label>{{ form.customer_apellido }}{{ form.customer_apellido.errors }}
+                <label>Apellido materno: </label>{{ form.customer_segundo_apellido }}{{ form.customer_segundo_apellido.errors }}
+
+        </div>
+
+
+
+  	<div data-role="fieldcontain">
+        <fieldset data-role="controlgroup">
+            <legend>Productos:</legend>
+            {{ form.items }}
+            <legend>Detalles:</legend>
+            {{ form.detalles }}
+        </fieldset>
+	</div>
+
+  <br/><br>
+  
+  <div data-role="fieldcontain">
+
+    <legend>Seguro:</legend>
+    {{ form.insurance }}
+    <label>Costo Total: Q.</label>{{ form.total }}
+
+  </div>
+
+
+    <button class="button-pago"type="submit">Agregar</button>
+    </form>
+{% endblock %}
